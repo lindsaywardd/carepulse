@@ -7,6 +7,9 @@ export default function Home() {
   return (
 
     <div className="flex h-screen max-h-screen">
+      {/* todo - add user verification (OTP - passkey model for admin panel) */}
+      
+      
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
           <Image
