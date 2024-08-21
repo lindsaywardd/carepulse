@@ -17,6 +17,7 @@ import Image from "next/image"
 import { PhoneIcon } from "lucide-react"
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { E164Number } from "libphonenumber-js/core";
 
 interface CustomProps {
     control: Control<any>,
