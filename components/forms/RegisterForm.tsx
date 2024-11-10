@@ -14,19 +14,10 @@ import { useRouter } from "next/navigation"
 import { createUser } from "@/lib/actions/patient.actions"
 
 import "react-phone-number-input/style.css";
-
-export enum FormFieldType {
-  INPUT = 'input',
-  TEXTAREA = 'textarea',
-  PHONE_INPUT = 'phoneInput',
-  CHECKBOX = 'checkbox',
-  DATE_PICKER = 'datePicker',
-  SELECT = 'select',
-  SKELETON = 'skeleton'
-}
+import { FormFieldType } from "./PatientForm";
 
  
-export const PatientForm = () => {
+export const RegisterForm = ({user}: {user: User}) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -69,27 +60,10 @@ export const PatientForm = () => {
          iconSrc="/assets/icons/user.svg"
          iconAlt="user"/>
 
-        <CustomFormField
-         fieldType={FormFieldType.INPUT}
-         control={form.control}
-         name="email"
-         label="Email"
-         placeholder="Email Address"
-         iconSrc="/assets/icons/email.svg"
-         iconAlt="email"/>
-
-        <CustomFormField
-         fieldType={FormFieldType.PHONE_INPUT}
-         control={form.control}
-         name="phone"
-         label="Phone Number"
-         placeholder="(123) 456-7890"
-        />
-
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
     </Form>
   )
 }
 
-export default PatientForm
+export default RegisterForm

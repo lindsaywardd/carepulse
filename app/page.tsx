@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-
     <div className="flex h-screen max-h-screen">
       {/* todo - add user verification (OTP - passkey model for admin panel) */}
       
